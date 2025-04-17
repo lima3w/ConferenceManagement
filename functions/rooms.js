@@ -5,7 +5,7 @@ const config = require("../config");
 const uri = config.mongodb.uri;
 
 const roomSchema = new mongoose.Schema({
-  roomNumber: { type: String, required: false },
+  roomNumber: { type: String, required: true, unique: true },
   roomName: { type: String, required: false },
   capacity: { type: Number, required: true },
 });
@@ -86,7 +86,7 @@ async function createRoom(roomData) {
     const newRoom = new Room(roomData);
 
     // Save the new room to the database
-    const saveRoom = await newRoom.save();
+    const savedRoom = await newRoom.save();
 
     return savedRoom;
   } catch (error) {
