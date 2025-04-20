@@ -2,29 +2,9 @@ const mongoose = require("mongoose");
 
 const config = require("../config");
 
-const uri = config.mongodb.uri;
+const Registration = require("../models/registrations");
 
-const registrationSchema = require("../models/registrations");
-
-// Create the Registration model
-const Registration = mongoose.model("Registration", registrationSchema);
-
-/**
- * Establishes a connection to the MongoDB database using Mongoose.
- * @async
- * @function connectToDatabase
- * @returns {Promise<void>} A Promise that resolves when the connection is established.
- * @throws {Error} If there is an error connecting to the database.
- */
-async function connectToDatabase() {
-    try {
-        await mongoose.connect(uri);
-        console.log("Connected to MongoDB using Mongoose");
-    } catch (error) {
-        console.error("Error connecting to MongoDB:", error);
-        throw error;
-    }
-}
+const connectToDatabase = require("../functions/database");
 
 /**
  * Retrieves a list of registrations from the MongoDB database using Mongoose.
@@ -36,11 +16,10 @@ async function connectToDatabase() {
 async function getRegistrations() {
     try {
         await connectToDatabase();
-        const registrations = await Registration.find(
-            {},
-            "firstName surName email"
-        );
-        // return JSON.stringify(registrations);
+        const registrations = await Registration.find({}).populate({
+            path: "user",
+            select: "firstName surName company",
+        });
         return registrations;
     } catch (error) {
         console.error("Error getting registrations:", error);

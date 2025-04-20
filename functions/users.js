@@ -2,29 +2,9 @@ const mongoose = require("mongoose");
 
 const config = require("../config");
 
-const uri = config.mongodb.uri;
+const connectToDatabase = require("../functions/database");
 
-const userSchema = require("../models/users");
-
-// Create the User model
-const User = mongoose.model("User", userSchema);
-
-/**
- * Establishes a connection to the MongoDB database using Mongoose.
- * @async
- * @function connectToDatabase
- * @returns {Promise<void>} A Promise that resolves when the connection is established.
- * @throws {Error} If there is an error connecting to the database.
- */
-async function connectToDatabase() {
-    try {
-        await mongoose.connect(uri);
-        console.log("Connected to MongoDB using Mongoose");
-    } catch (error) {
-        console.error("Error connecting to MongoDB:", error);
-        throw error;
-    }
-}
+const User = require("../models/users");
 
 /**
  * Retrieves a list of users from the MongoDB database using Mongoose.
@@ -37,7 +17,7 @@ async function getUsers() {
     try {
         await connectToDatabase();
         const users = await User.find({}, "firstName surName email");
-        // return JSON.stringify(users);
+
         return users;
     } catch (error) {
         console.error("Error getting users:", error);
