@@ -1,0 +1,64 @@
+{
+  "id": "26c2c86f-19f5-4ae0-ae5e-c2b19597861e",
+  "name": "Rooms",
+  "requests": [
+    {
+      "id": "9eb8d7a2-c39e-4d82-a2b0-7a8df3414140",
+      "collectionId": "26c2c86f-19f5-4ae0-ae5e-c2b19597861e",
+      "method": "GET",
+      "url": "http://localhost:3000/api/v1/rooms",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "\"roomNumber\"",
+          "value": "\"1\"",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "\"roomName\"",
+          "value": "\"Great Hall\"",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "\"capacity\"",
+          "value": "999",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    },
+    {
+      "id": "9282e8f7-47b2-4c5f-9f00-fc2e5466ef09",
+      "collectionId": "26c2c86f-19f5-4ae0-ae5e-c2b19597861e",
+      "method": "POST",
+      "url": "http://localhost:3000/api/v1/rooms",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "roomNumber",
+          "value": "",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "roomName",
+          "value": "Great Hall",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "capacity",
+          "value": "999",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    }
+  ]
+}

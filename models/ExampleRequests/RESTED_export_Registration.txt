@@ -1,0 +1,52 @@
+{
+  "id": "48a13e1d-d78a-4a3d-b9d5-2889a5d96f05",
+  "name": "Registration",
+  "requests": [
+    {
+      "id": "4c899fad-4771-42a0-b164-d3d28ae85410",
+      "collectionId": "48a13e1d-d78a-4a3d-b9d5-2889a5d96f05",
+      "method": "GET",
+      "url": "http://localhost:3000/api/v1/registrations",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "user",
+          "value": "\"67fec84f2844ce8533a9ddf5\"",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "date",
+          "value": "\"2025-04-18T01:02:03Z\"",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    },
+    {
+      "id": "2fa89893-9217-435b-b81d-13e73731f6ad",
+      "collectionId": "48a13e1d-d78a-4a3d-b9d5-2889a5d96f05",
+      "method": "POST",
+      "url": "http://localhost:3000/api/v1/registrations",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "\"uid\"",
+          "value": "\"67fec84f2844ce8533a9ddf5\"",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "date",
+          "value": "\"2025-04-18T01:02:03Z\"",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    }
+  ]
+}

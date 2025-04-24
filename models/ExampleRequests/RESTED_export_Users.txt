@@ -1,0 +1,96 @@
+{
+  "id": "c5daac41-bbc2-4d6e-a683-53e78b1cff37",
+  "name": "Users",
+  "requests": [
+    {
+      "id": "f675eede-159c-4af6-9513-fb62239750e5",
+      "collectionId": "c5daac41-bbc2-4d6e-a683-53e78b1cff37",
+      "method": "POST",
+      "url": "http://localhost:3000/api/v1/users",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "username",
+          "value": "testUser",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "surName",
+          "value": "testUser1",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "email",
+          "value": "test@xample.org",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "firstName",
+          "value": "John",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    },
+    {
+      "id": "038a5d41-5e06-4fb3-9778-c3b4ea2c506b",
+      "collectionId": "c5daac41-bbc2-4d6e-a683-53e78b1cff37",
+      "method": "POST",
+      "url": "http://localhost:3000/api/v1/users",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "",
+          "value": "",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    },
+    {
+      "id": "1f28647d-e080-4003-9b81-658f01ff6afb",
+      "collectionId": "c5daac41-bbc2-4d6e-a683-53e78b1cff37",
+      "method": "GET",
+      "url": "http://localhost:3000/api/v1/users/67fec84f2844ce8533a9ddf5",
+      "headers": "\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "",
+          "value": "",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    },
+    {
+      "id": "d3b26c6d-39c4-4b2c-8e3f-061df0d5fab4",
+      "collectionId": "c5daac41-bbc2-4d6e-a683-53e78b1cff37",
+      "method": "GET",
+      "url": "http://localhost:3000/api/v1/users",
+      "headers": "\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "",
+          "value": "",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    }
+  ]
+}

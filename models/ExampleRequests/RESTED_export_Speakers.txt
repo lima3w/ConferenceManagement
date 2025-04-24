@@ -1,0 +1,52 @@
+{
+  "id": "38471385-4a1c-4d7a-8242-791fa16afb4c",
+  "name": "Speakers",
+  "requests": [
+    {
+      "id": "d6c866d0-58b8-408e-9208-e0f20cd60075",
+      "collectionId": "38471385-4a1c-4d7a-8242-791fa16afb4c",
+      "method": "POST",
+      "url": "http://localhost:3000/api/v1/speakers",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "speaker",
+          "value": "\"67fec84f2844ce8533a9ddf5\"",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "bio",
+          "value": "\"This speaker has experience with this subject\"",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    },
+    {
+      "id": "c76ffba7-4f03-44ef-a664-d46cbbb0cd6e",
+      "collectionId": "38471385-4a1c-4d7a-8242-791fa16afb4c",
+      "method": "GET",
+      "url": "http://localhost:3000/api/v1/speakers",
+      "headers": "Content-Type: application/json\n",
+      "dataMode": "urlencoded",
+      "data": [
+        {
+          "key": "user",
+          "value": "\"67fec84f2844ce8533a9ddf5\"",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "date",
+          "value": "\"2025-04-18T01:02:03Z\"",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "rawModeData": []
+    }
+  ]
+}
